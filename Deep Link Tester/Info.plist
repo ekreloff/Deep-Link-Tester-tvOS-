@@ -26,6 +26,10 @@
 	<array>
 		<string>arm64</string>
 	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>pantaya</string>
+	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Automatic</string>
 </dict>
