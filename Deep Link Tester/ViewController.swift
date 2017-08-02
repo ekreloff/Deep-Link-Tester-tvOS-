@@ -11,12 +11,17 @@ import UIKit
 class ViewController: UIViewController {
     var host: String = "play"
     var contentId: String?
+    var resumeTime: String?
     
     var url: URL? {
         var urlString = "pantaya://\(host)"
         
         if let contentId = contentId {
             urlString.append("/\(contentId)")
+        }
+        
+        if let resumeTime = resumeTime {
+            urlString.append("?\(resumeTime)")
         }
         
         return URL(string: urlString)
@@ -32,6 +37,10 @@ class ViewController: UIViewController {
         contentId = sender.text
     }
 
+    @IBAction func resumeTimeTextFieldEditingDidEnd(_ sender: UITextField) {
+        resumeTime = sender.text
+    }
+    
     @IBAction func goButtonAction() {
         guard let url = url else {
             return

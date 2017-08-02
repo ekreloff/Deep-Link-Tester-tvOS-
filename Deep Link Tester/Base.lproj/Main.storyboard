@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcF-uQ-uNV">
-                                <rect key="frame" x="896" y="613" width="129" height="86"/>
+                                <rect key="frame" x="896" y="689" width="129" height="86"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Go"/>
                                 <connections>
@@ -54,16 +54,28 @@
                                     <action selector="contentIdTextFieldEditingDidEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="6xj-D2-rqy"/>
                                 </connections>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Resume Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yyi-Ta-3Uh">
+                                <rect key="frame" x="299" y="593" width="1323" height="46"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="resumeTimeTextFieldEditingDidEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="jkQ-w1-cUO"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="VcF-uQ-uNV" firstAttribute="centerX" secondItem="fYR-7u-Mvm" secondAttribute="centerX" id="07C-hJ-Ppc"/>
+                            <constraint firstItem="VcF-uQ-uNV" firstAttribute="top" secondItem="Yyi-Ta-3Uh" secondAttribute="bottom" constant="50" id="36m-AW-IYA"/>
                             <constraint firstItem="fYR-7u-Mvm" firstAttribute="width" secondItem="M8t-vT-tmb" secondAttribute="width" id="3GH-DZ-GOv"/>
+                            <constraint firstItem="Yyi-Ta-3Uh" firstAttribute="centerX" secondItem="fYR-7u-Mvm" secondAttribute="centerX" id="5Ua-Le-ULx"/>
                             <constraint firstItem="M8t-vT-tmb" firstAttribute="centerX" secondItem="fYR-7u-Mvm" secondAttribute="centerX" id="5rA-cK-3Q3"/>
                             <constraint firstItem="fYR-7u-Mvm" firstAttribute="top" secondItem="M8t-vT-tmb" secondAttribute="bottom" constant="50" id="7kf-rl-m5m"/>
-                            <constraint firstItem="VcF-uQ-uNV" firstAttribute="top" secondItem="fYR-7u-Mvm" secondAttribute="bottom" constant="50" id="KRU-Ul-zpz"/>
+                            <constraint firstItem="Yyi-Ta-3Uh" firstAttribute="top" secondItem="fYR-7u-Mvm" secondAttribute="bottom" constant="30" id="oQL-F6-M86"/>
                             <constraint firstItem="fYR-7u-Mvm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wue-in-9Fz"/>
                             <constraint firstItem="fYR-7u-Mvm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yYf-pa-m9b"/>
+                            <constraint firstItem="Yyi-Ta-3Uh" firstAttribute="width" secondItem="fYR-7u-Mvm" secondAttribute="width" id="zFB-ts-H8q"/>
                         </constraints>
                     </view>
                 </viewController>
