@@ -190,7 +190,6 @@
 				TargetAttributes = {
 					C6D3BECA1F3251050029C70E = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = DKSUFJ9RL5;
 						ProvisioningStyle = Automatic;
 					};
 					C6D3BEDB1F3251060029C70E = {
@@ -404,7 +403,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = DKSUFJ9RL5;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Deep Link Tester/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kreloff.Deep-Link-Tester";
@@ -418,7 +417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = DKSUFJ9RL5;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Deep Link Tester/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kreloff.Deep-Link-Tester";
@@ -504,6 +503,7 @@
 				C6D3BEF21F3251060029C70E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C6D3BEF31F3251060029C70E /* Build configuration list for PBXNativeTarget "Deep Link TesterTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +512,7 @@
 				C6D3BEF51F3251060029C70E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C6D3BEF61F3251060029C70E /* Build configuration list for PBXNativeTarget "Deep Link TesterUITests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +521,7 @@
 				C6D3BEF81F3251060029C70E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
