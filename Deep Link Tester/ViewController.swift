@@ -6,47 +6,55 @@
 //  Copyright © 2017 Ethan Kreloff. All rights reserved.
 //
 
+//link by Loudoun Design Co. from the Noun Project
+
 import UIKit
 
 class ViewController: UIViewController {
-    var host: String = "play"
-    var contentId: String?
-    var resumeTime: String?
-    
+    @IBOutlet weak var schemeTextField: UITextField!
+    @IBOutlet weak var domainTextField: UITextField!
+
+    weak var queryTableViewController: QueryTableViewController?
+
     var url: URL? {
-        var urlString = "pantaya://\(host)"
+        var urlString = ""
         
-        if let contentId = contentId {
-            urlString.append("/\(contentId)")
+        if let scheme = schemeTextField.text {
+            urlString.append(scheme)
+            urlString.append("://")
         }
         
-        if let resumeTime = resumeTime {
-            urlString.append("?\(resumeTime)")
+        if let domain = domainTextField.text {
+            urlString.append(domain)
+        }
+
+        if let queryTableViewController = queryTableViewController {
+            urlString.append(queryTableViewController.queryString)
         }
         
         return URL(string: urlString)
     }
 
-    @IBAction func hostSegmentControlValueChanged(_ sender: UISegmentedControl) {
-        if let selectedHost = sender.titleForSegment(at: sender.selectedSegmentIndex)?.lowercased() {
-            host = selectedHost
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.destination {
+        case is QueryTableViewController:
+            queryTableViewController = segue.destination as? QueryTableViewController
+        default:
+            return
         }
     }
     
-    @IBAction func contentIdTextFieldEditingDidEnd(_ sender: UITextField) {
-        contentId = sender.text
+    @IBAction func addButtonAction() {
+        queryTableViewController?.cellCount += 1
     }
 
-    @IBAction func resumeTimeTextFieldEditingDidEnd(_ sender: UITextField) {
-        resumeTime = sender.text
-    }
-    
     @IBAction func goButtonAction() {
         guard let url = url else {
             return
         }
         
          if UIApplication.shared.canOpenURL(url) {
+            
             UIApplication.shared.open(url)
         }
     }
