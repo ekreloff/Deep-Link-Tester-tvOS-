@@ -54,7 +54,6 @@ class ViewController: UIViewController {
         }
         
          if UIApplication.shared.canOpenURL(url) {
-            
             UIApplication.shared.open(url)
         }
     }
